@@ -1,1 +1,10 @@
 @import'../../src/sass/normalize.css';
+
+@import'base/base';
+@import'base/constans';
+@import'base/font';
+@import'base/mixin';
+
+@import'layouts/main';
+@import'layouts/wrapper';
+@import'layouts/footer';

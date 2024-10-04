@@ -1,0 +1,27 @@
+@mixin media-tablet-big {
+  @media(max-width: $media-tablet-big) {@content;}
+};
+
+@mixin media-tablet {
+  @media(max-width: $media-tablet) {@content;}
+};
+
+@mixin media-tablet-small {
+  @media(max-width: $media-tablet-small) {@content;}
+};
+
+@mixin media-phone-big {
+  @media(max-width: $media-phone-big) {@content;}
+};
+
+@mixin media-phone {
+  @media(max-width: $media-phone) {@content;}
+};
+
+@mixin media-phone-small {
+  @media(max-width: $media-phone-small) {@content;}
+};
+
+@mixin media-mobale {
+  @media(max-width: $media-mobale) {@content;}
+};
