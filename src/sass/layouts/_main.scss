@@ -4,7 +4,17 @@
   background: url('../../src/img/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  @include tablet {
+    height: calc(100vh - 110px);
+  }
+  @include media-tablet-small {
+    height: calc(100vh - 100px);
+  }
+  @include media-phone-big {
+    height: calc(100vh - 70px);
+  }
   @include media-phone-small {
+    height: calc(100vh - 50px);
     padding: 27% 3% 0% 3%;
   }
 };
@@ -35,7 +45,7 @@
 
 .background__line {
   max-width: 1098px;
-  height: 5px;
+  height: 2px;
   margin: 0 0 50px 70px;
   background-color: $color-footer;
   @include media-tablet-small {

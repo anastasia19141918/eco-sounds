@@ -26,8 +26,24 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 640px) {
+  .background {
+    height: calc(100vh - 110px);
+  }
+}
+@media (max-width: 595px) {
+  .background {
+    height: calc(100vh - 100px);
+  }
+}
+@media (max-width: 475px) {
+  .background {
+    height: calc(100vh - 70px);
+  }
+}
 @media (max-width: 290px) {
   .background {
+    height: calc(100vh - 50px);
     padding: 27% 3% 0% 3%;
   }
 }
@@ -68,7 +84,7 @@ a {
 
 .background__line {
   max-width: 1098px;
-  height: 5px;
+  height: 2px;
   margin: 0 0 50px 70px;
   background-color: #060606;
 }
@@ -239,6 +255,70 @@ a {
     height: 20px;
     background-size: 20px 20px;
   }
+}
+
+.pop {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.5s all;
+}
+
+.pop__active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.5s all;
+}
+
+.pop__body {
+  position: absolute;
+  padding: 30px 35px 60px;
+  top: 10%;
+  left: 40%;
+  background-image: linear-gradient(#75A3BF, #898C30);
+  border-radius: 5px;
+}
+@media (max-width: 978px) {
+  .pop__body {
+    left: 35%;
+    padding: 20px 30px 40px;
+  }
+}
+
+.pop__btn-close {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 30px 0;
+}
+
+.pop__close {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../src/img/Close-pop.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pop__itemns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pop_link {
+  font-size: 2.5rem;
+  color: #171C26;
 }
 
 /*# sourceMappingURL=index.css.map */
