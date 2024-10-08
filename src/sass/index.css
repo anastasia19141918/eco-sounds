@@ -258,6 +258,8 @@ a {
 }
 
 .pop {
+  opacity: 0;
+  pointer-events: none;
   position: fixed;
   height: 100vh;
   width: 100%;
