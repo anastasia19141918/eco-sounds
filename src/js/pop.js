@@ -25,7 +25,6 @@ document.addEventListener('click', function(el){
   const click = el.target;
   if(click === pop) {
     pop.classList.remove('pop__active');
-    
   }
 })
 
