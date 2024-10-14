@@ -73,6 +73,10 @@
   }
 }
 
+.trek__active {
+  color: $colo-active-track;
+}
+
 .player__progress {
   display: flex;
   flex-direction: column;
@@ -181,6 +185,7 @@
     height: 50px;
     background-image: url('../../src/img/play.svg');
     background-size: 50px 50px;
+    transition: 0.3s ease-in-out;
     @include phone {
       width: 40px;
       height: 40px;
@@ -193,5 +198,17 @@
     background-image: url('../../src/img/play-next.svg');
     background-size: 30px 30px;
   }
+}
+
+.player__btn_pause {
+  width: 50px;
+    height: 50px;
+    background-image: url('../../src/img/pause.svg');
+    background-size: 50px 50px;
+    @include phone {
+      width: 40px;
+      height: 40px;
+      background-size: 40px 40px;
+    }
 }
 

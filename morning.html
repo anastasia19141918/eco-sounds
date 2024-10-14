@@ -13,21 +13,9 @@
       <div class="wrapper morning__wrapper">
         
         <div class="player player__morning">
-          <ul class="playlist">
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-            <li class="trek">Morning sounds</li>
-          </ul>
+          <ul class="playlist" id="playlist"></ul>
           <div class="player__progress">
-            <div class="player__title trek">Morning sounds</div>
+            <div class="player__title trek" id="player__title">Morning sounds</div>
             <div class="progressBar">
               <input type="range" class="player__range" value="0" min="0" max="100" step="1" id="player__range">
             </div>
@@ -43,9 +31,9 @@
             </div>
           </div>
           <div class="player__btns">
-            <button class="player__btn player__btn_prev"></button>
-            <button class="player__btn player__btn_play"></button>
-            <button class="player__btn player__btn_next"></button>
+            <button class="player__btn player__btn_prev" id="player__btn_prev"></button>
+            <button class="player__btn player__btn_play" id="player__btn_play"></button>
+            <button class="player__btn player__btn_next" id="player__btn_next"></button>
           </div>
         </div>
 
@@ -59,6 +47,6 @@
       <div><a href="https://github.com/anastasia19141918" class="footer__githab"></a></div>
     </div>
   </footer>
-  <script src="./src/js/morning.js" type="module"></script>
+  <script type="module" src="./src/js/morning.js"></script>
 </body>
 </html>
