@@ -482,6 +482,10 @@ ul {
   }
 }
 
+.trek__active {
+  color: #14261C;
+}
+
 .player__progress {
   display: flex;
   flex-direction: column;
@@ -595,6 +599,7 @@ ul {
   height: 50px;
   background-image: url("../../src/img/play.svg");
   background-size: 50px 50px;
+  transition: 0.3s ease-in-out;
 }
 @media (max-width: 380px) {
   .player__btn_play {
@@ -608,6 +613,20 @@ ul {
   height: 30px;
   background-image: url("../../src/img/play-next.svg");
   background-size: 30px 30px;
+}
+
+.player__btn_pause {
+  width: 50px;
+  height: 50px;
+  background-image: url("../../src/img/pause.svg");
+  background-size: 50px 50px;
+}
+@media (max-width: 380px) {
+  .player__btn_pause {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
