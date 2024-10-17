@@ -416,6 +416,28 @@ ul {
   justify-content: center;
 }
 
+.header__link {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #14261C;
+  font-size: 2.5rem;
+}
+@media (max-width: 978px) {
+  .header__link {
+    font-size: 2.3rem;
+  }
+}
+@media (max-width: 380px) {
+  .header__link {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 290px) {
+  .header__link {
+    font-size: 1.8rem;
+  }
+}
+
 .player__morning {
   width: 360px;
   padding: 20px;
@@ -456,10 +478,20 @@ ul {
   gap: 5px;
   margin-bottom: 10px;
 }
+@media (max-width: 475px) {
+  .playlist {
+    max-width: 70%;
+  }
+}
 
 .trek {
   color: #ffffff;
   font-size: 2.1rem;
+}
+@media (max-width: 475px) {
+  .trek {
+    font-size: 1.9rem;
+  }
 }
 @media (max-width: 410px) {
   .trek {
@@ -468,7 +500,7 @@ ul {
 }
 @media (max-width: 380px) {
   .trek {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 290px) {
