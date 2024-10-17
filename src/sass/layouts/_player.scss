@@ -17,10 +17,45 @@
   }
 }  
 
+.background__birds {
+  padding: 10% 0% 10% 0%;
+  background: url('../../src/img/birds.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include media-phone-big {
+    padding: 12% 0% 10% 0%;
+  }
+  @include phone {
+    padding: 20% 0% 10% 0%;
+  }
+  @include media-phone-small {
+    padding: 40% 0% 10% 0%;
+  }
+  @include media-mobale {
+    padding: 50% 0% 10% 0%;
+  }
+}
+
 .morning__wrapper {
   display: grid;
   align-items: center;
   justify-content: center;
+}
+
+.header__link {
+  margin-bottom: 10px;
+  text-align: center;
+  color: $colo-active-track;
+  font-size: 2.5rem;
+  @include media-tablet-big {
+    font-size: 2.3rem;
+  }
+  @include phone {
+    font-size: 2.0rem;
+  }
+  @include media-phone-small {
+    font-size: 1.8rem;
+  }
 }
 
 .player__morning {
@@ -49,21 +84,27 @@
 
 
 .playlist {
-  max-width: 50%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-bottom: 10px;
+  @include media-phone-big {
+    max-width: 70%;
+  }
 }
 
 .trek {
   color: $colot-link;
   font-size: 2.1rem;
+  @include media-phone-big {
+    font-size: 1.9rem;
+  }
   @include media-phone {
     font-size: 1.8rem;
   }
   @include phone {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   @include media-phone-small {
     font-size: 1.3rem;
@@ -149,12 +190,20 @@
   height: 20px;
   background-image: url('../../src/img/volume.svg');
   background-size: 20px 20px;
+  transition: .3s ease-in-out;
+}
+
+.saund__btn__not__active {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../src/img/mute.svg');
+  background-size: 20px 20px;
 }
 
 .saund__range {
   width: 100%;
   height: 4px;
-  background: linear-gradient(to right,  $colot-link 0%, $colot-link 0%, #c8c8c8  0%, #c8c8c8  100%);
+  background: linear-gradient(to right,  $colot-link 50%, $colot-link 50%, #c8c8c8  0%, #c8c8c8  100%);
   
   border-radius: 5px;
   outline: none;

@@ -7,6 +7,10 @@ let playNum = 0;
 const playerBtn = document.getElementById('player__btn_play');
 const playerTitle = document.getElementById('player__title');
 const playerRange = document.getElementById('player__range');
+const saundBtn = document.getElementById('saund__btn');
+const saundRange = document.getElementById('saund__range');
+
+const playlist = document.getElementById('playlist');
 
 const current = document.getElementById('current');
 const lenghtTime = document.getElementById('lenghtTime');
@@ -16,6 +20,8 @@ audio.addEventListener('timeupdate', updateProgress);
 audio.addEventListener('ended', playNext);
 audio.addEventListener('timeupdate', timeProgressBar);
 playerRange.addEventListener('change', setProgressPlay);
+saundBtn.addEventListener('click', playSaund);
+saundRange.addEventListener('input', saundInput);
 
 export function showTreck(el) {
   el.forEach(function(e, index){
@@ -33,6 +39,7 @@ export function showTreck(el) {
     playerBtn.classList.add('player__btn_pause');
     playerTitle.textContent = sounds[0][playNum].name;
     audio.play();
+    console.log(playerTitle.textContent = sounds[0][playNum].name);
   } 
   
   else {
@@ -40,7 +47,10 @@ export function showTreck(el) {
     playerBtn.classList.remove('player__btn_pause');
     audio.pause();
   }
+  
 };
+
+//next, prev start
 
 export function playNext (el) {
   if(playNum === el.length-1) {
@@ -71,6 +81,8 @@ function saundsTreck(el) {
     audio.play();
   }
 }
+
+//next, prev end
 
 //progress start
 
@@ -136,6 +148,42 @@ function audioLenght () {
 
 //time progress bsr end
 
+// saund start
+
+export function playSaund() {
+  
+  if (!saundBtn.classList.contains('saund__btn__not__active')) {
+    saundBtn.classList.add('saund__btn__not__active');
+    saundBtn.classList.remove('saund__btn');
+    audio.volume = 0;
+    saundRange.style.background = `linear-gradient(to right, #ffffff 0%, #ffffff 0%, #c8c8c8 0%, #c8c8c8 100%)`;
+    saundRange.value = '0';
+  }
+  else {
+    saundBtn.classList.remove('saund__btn__not__active');
+    saundBtn.classList.add('saund__btn');
+    audio.volume = 1;
+    saundRange.style.background = `linear-gradient(to right, #ffffff 0%, #ffffff 50%, #c8c8c8 50%, #c8c8c8 100%)`;
+    saundRange.value = '50%';
+  }
+};
+
+export function saundInput(el) {
+  const value = el.target.value;
+  saundRange.style.background = `linear-gradient(to right, #ffffff 0%, #ffffff ${value}%, #c8c8c8 ${value}%, #c8c8c8 100%)`;
+
+  if (value === this.min) {
+    audio.volume = 0;
+    saundBtn.classList.remove('saund__btn');
+    saundBtn.classList.add('saund__btn__not__active');
+  } else {
+    audio.volume = value / 100;
+    saundBtn.classList.add('saund__btn');
+    saundBtn.classList.remove('saund__btn__not__active');
+  }
+}
+
+//saund end
 
 
 
