@@ -10,7 +10,7 @@ showTreck(sounds[0]);
 playerBtnNext.addEventListener('click', () => playNext(sounds[0]));
 playerBtnPrev.addEventListener('click', () => playPref(sounds[0]));
 
-;
+
 
 
 

@@ -116,7 +116,7 @@ const sounds = [
       id:11,
       name: 'Birds Singing 12',
       src: 'src/audio/Birds/Birds-singing_12.mp3'
-    }
+    },
     {
       id:12,
       name: 'Birds Singing 13',
