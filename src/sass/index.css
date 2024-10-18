@@ -384,7 +384,7 @@ ul {
 }
 
 .background__morning {
-  padding: 10% 0% 10% 0%;
+  padding: 5% 0% 10% 0%;
   background: url("../../src/img/morning.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -411,7 +411,7 @@ ul {
 }
 
 .background__birds {
-  padding: 10% 0% 10% 0%;
+  padding: 5% 0% 10% 0%;
   background: url("../../src/img/birds.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -499,7 +499,7 @@ ul {
 }
 
 .playlist {
-  max-width: 50%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   gap: 5px;
