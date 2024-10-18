@@ -122,6 +122,90 @@ const sounds = [
       name: 'Birds Singing 13',
       src: 'src/audio/Birds/Birds-singing_13.mp3'
     }
+  ],
+  [
+    {
+      id:0,
+      name: 'Morning in the city 1',
+      src: 'src/audio/City/city_1.mp3'
+    },
+    {
+      id:1,
+      name: 'Morning in the city 2',
+      src: 'src/audio/City/city_2.mp3'
+    },
+    {
+      id:2,
+      name: 'Morning in the city 3',
+      src: 'src/audio/City/city_3.mp3'
+    },
+    {
+      id:3,
+      name: 'Morning in the city 4',
+      src: 'src/audio/City/city_4.mp3'
+    },
+    {
+      id:4,
+      name: 'Morning in the city 5',
+      src: 'src/audio/City/city_5.mp3'
+    },
+    {
+      id:5,
+      name: 'Morning in the city 6',
+      src: 'src/audio/City/city_6.mp3'
+    },
+    {
+      id:6,
+      name: 'Morning in the city 7',
+      src: 'src/audio/City/city_7.mp3'
+    },
+    {
+      id:7,
+      name: 'Morning in the city 8',
+      src: 'src/audio/City/city_8.mp3'
+    }
+  ],
+  [
+    {
+      id:0,
+      name: 'Random sounds 1',
+      src: 'src/audio/Random/Random_1.mp3'
+    },
+    {
+      id:1,
+      name: 'Random sounds 2',
+      src: 'src/audio/Random/Random_2.mp3'
+    },
+    {
+      id:2,
+      name: 'Random sounds 3',
+      src: 'src/audio/Random/Random_3.mp3'
+    },
+    {
+      id:3,
+      name: 'Random sounds 4',
+      src: 'src/audio/Random/Random_4.mp3'
+    },
+    {
+      id:4,
+      name: 'Random sounds 5',
+      src: 'src/audio/Random/Random_5.mp3'
+    },
+    {
+      id:5,
+      name: 'Random sounds 6',
+      src: 'src/audio/Random/Random_6.mp3'
+    },
+    {
+      id:6,
+      name: 'Random sounds 7',
+      src: 'src/audio/Random/Random_7.mp3'
+    },
+    {
+      id:7,
+      name: 'Random sounds 8',
+      src: 'src/audio/Random/Random_8.mp3'
+    },
   ]
 ]
 

@@ -1,36 +1,38 @@
 import sounds from './sounds.js';
-import {showTreck} from './showTreck.js';
+import {showTreck} from './showTreck.js'
+
+showTreck(sounds[2]);
 
 const audio = new Audio;
 let isPlay = false;
 let playNum = 0;
 
+const playerBtnPlayCity = document.getElementById('player__btn_play-city');
+const playerTitle = document.getElementById('player__title');
 const playerBtnNext = document.getElementById('player__btn_next');
 const playerBtnPrev = document.getElementById('player__btn_prev');
-const playerBtnPlayBirds = document.getElementById('player__btn_play-birds');
-const playerTitle = document.getElementById('player__title');
-
-showTreck(sounds[1]);
-playerBtnPlayBirds.addEventListener('click', playAudioBirds);
-playerBtnNext.addEventListener('click', () => playNext(sounds[1]));
-playerBtnPrev.addEventListener('click', () => playPref(sounds[1]));
+playerBtnNext.addEventListener('click', () => playNext(sounds[2]));
+playerBtnPrev.addEventListener('click', () => playPref(sounds[2]));
 audio.addEventListener('ended', playNext);
 
-function playAudioBirds () {
+playerBtnPlayCity.addEventListener('click', playAudioCity);
+
+
+function playAudioCity () {
   if (isPlay === false) {
     isPlay = true;
     audio.currentTime = 0;
-    playerBtnPlayBirds.classList.add('player__btn_pause');
-    audio.src = sounds[1][playNum].src;
-    playerTitle.textContent = sounds[1][playNum].name;
+    playerBtnPlayCity.classList.add('player__btn_pause');
+    audio.src = sounds[2][playNum].src;
+    playerTitle.textContent = sounds[2][playNum].name;
     audio.play();
   }
   else {
     isPlay = false;
-    playerBtnPlayBirds.classList.remove('player__btn_pause');
+    playerBtnPlayCity.classList.remove('player__btn_pause');
     audio.pause();
   }
-};
+}
 
 export function saundsTreck() {
   if(isPlay === true) {
@@ -47,7 +49,7 @@ export function playNext (el) {
     playNum++;
     saundsTreck() 
   }
-  playAudioBirds();
+  playAudioCity();
 };
 
 export function playPref (el) {
@@ -58,7 +60,7 @@ export function playPref (el) {
     playNum --;
     saundsTreck()
   }
-  playAudioBirds();
+  playAudioCity();
 }
 
 //progress start
