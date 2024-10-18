@@ -1,45 +1,48 @@
 import sounds from './sounds.js';
-import {showTreck} from './showTreck.js';
+import {showTreck} from './showTreck.js'
+
+showTreck(sounds[3]);
 
 const audio = new Audio;
 let isPlay = false;
 let playNum = 0;
 
-const playerBtnNext = document.getElementById('player__btn_next');
-const playerBtnPrev = document.getElementById('player__btn_prev');
-const playerBtnPlayBirds = document.getElementById('player__btn_play-birds');
+const playerBtnPlayRandom = document.getElementById('player__btn_play-random');
 const playerTitle = document.getElementById('player__title');
 
-showTreck(sounds[1]);
-playerBtnPlayBirds.addEventListener('click', playAudioBirds);
-playerBtnNext.addEventListener('click', () => playNext(sounds[1]));
-playerBtnPrev.addEventListener('click', () => playPref(sounds[1]));
+const playerBtnNext = document.getElementById('player__btn_next');
+const playerBtnPrev = document.getElementById('player__btn_prev');
+playerBtnNext.addEventListener('click', () => playNext(sounds[2]));
+playerBtnPrev.addEventListener('click', () => playPref(sounds[2]));
 audio.addEventListener('ended', playNext);
 
-function playAudioBirds () {
+playerBtnPlayRandom.addEventListener('click', playAudioRandom);
+
+function playAudioRandom () {
   if (isPlay === false) {
     isPlay = true;
     audio.currentTime = 0;
-    playerBtnPlayBirds.classList.add('player__btn_pause');
-    audio.src = sounds[1][playNum].src;
-    playerTitle.textContent = sounds[1][playNum].name;
+    playerBtnPlayRandom.classList.add('player__btn_pause');
+    audio.src = sounds[3][playNum].src;
+    playerTitle.textContent = sounds[3][playNum].name;
     audio.play();
   }
   else {
     isPlay = false;
-    playerBtnPlayBirds.classList.remove('player__btn_pause');
+    playerBtnPlayRandom.classList.remove('player__btn_pause');
     audio.pause();
   }
 };
 
-export function saundsTreck() {
+function saundsTreck() {
   if(isPlay === true) {
     isPlay = false;
     audio.play();
   }
-}
+};
 
-export function playNext (el) {
+
+function playNext (el) {
   if(playNum === el.length-1) {
     playNum = 0;
     saundsTreck() 
@@ -47,10 +50,10 @@ export function playNext (el) {
     playNum++;
     saundsTreck() 
   }
-  playAudioBirds();
+  playAudioRandom();
 };
 
-export function playPref (el) {
+function playPref (el) {
   if(playNum === 0) {
     playNum = el.length-1;
     saundsTreck()
@@ -58,8 +61,8 @@ export function playPref (el) {
     playNum --;
     saundsTreck()
   }
-  playAudioBirds();
-}
+  playAudioRandom();
+};
 
 //progress start
 
@@ -174,3 +177,5 @@ export function saundInput(el) {
 }
 
 //saund end*/
+
+
