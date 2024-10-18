@@ -437,6 +437,33 @@ ul {
   }
 }
 
+.background__city {
+  padding: 5% 0% 10% 0%;
+  background: url("../../src/img/city.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 475px) {
+  .background__city {
+    padding: 12% 0% 10% 0%;
+  }
+}
+@media (max-width: 380px) {
+  .background__city {
+    padding: 20% 0% 10% 0%;
+  }
+}
+@media (max-width: 290px) {
+  .background__city {
+    padding: 40% 0% 10% 0%;
+  }
+}
+@media (max-width: 255px) {
+  .background__city {
+    padding: 50% 0% 10% 0%;
+  }
+}
+
 .morning__wrapper {
   display: grid;
   align-items: center;
