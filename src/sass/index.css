@@ -306,22 +306,50 @@ a {
     padding: 20px 20px 40px;
   }
 }
-@media (max-width: 475px) {
+@media (max-width: 535px) {
   .pop__body {
     top: 20%;
     left: 25%;
   }
 }
+@media (max-width: 475px) {
+  .pop__body {
+    top: 24%;
+    left: 22%;
+  }
+}
+@media (max-width: 458px) {
+  .pop__body {
+    top: 24%;
+    left: 20%;
+  }
+}
+@media (max-width: 429px) {
+  .pop__body {
+    top: 24%;
+    left: 18%;
+  }
+}
 @media (max-width: 410px) {
   .pop__body {
-    top: 20%;
-    left: 20%;
+    top: 24%;
+    left: 16%;
   }
 }
 @media (max-width: 380px) {
   .pop__body {
     left: 22%;
     padding: 30px 15px 50px;
+  }
+}
+@media (max-width: 355px) {
+  .pop__body {
+    left: 19%;
+  }
+}
+@media (max-width: 335px) {
+  .pop__body {
+    left: 17%;
   }
 }
 @media (max-width: 290px) {
