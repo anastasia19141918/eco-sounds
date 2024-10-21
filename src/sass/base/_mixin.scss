@@ -14,8 +14,20 @@
   @media(max-width: $media-tablet-small) {@content;}
 };
 
+@mixin media-tablet-pop {
+  @media(max-width: $media-tablet-pop) {@content;}
+};
+
 @mixin media-phone-big {
   @media(max-width: $media-phone-big) {@content;}
+};
+
+@mixin media-phone-big-pop {
+  @media(max-width: $media-phone-big-pop) {@content;}
+};
+
+@mixin media-phone-pop {
+  @media(max-width: $media-phone-pop) {@content;}
 };
 
 @mixin media-phone {
@@ -26,8 +38,16 @@
   @media(max-width: $phone) {@content;}
 };
 
+@mixin phone-pop {
+  @media(max-width: $phone-pop) {@content;}
+};
+
 @mixin media-phone-small {
   @media(max-width: $media-phone-small) {@content;}
+};
+
+@mixin phone-pop-small {
+  @media(max-width: $phone-pop-small) {@content;}
 };
 
 @mixin media-mobale {

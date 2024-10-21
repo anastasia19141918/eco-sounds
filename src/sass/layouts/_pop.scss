@@ -39,17 +39,37 @@
   @include media-tablet-small {
     padding: 20px 20px 40px;
   }
-  @include media-phone-big {
+
+  @include media-tablet-pop {
     top: 20%;
     left: 25%;
   }
-  @include media-phone {
-    top: 20%;
+
+  @include media-phone-big {
+    top: 24%;
+    left: 22%;
+  }
+  @include media-phone-big-pop {
+    top: 24%;
     left: 20%;
+  }
+  @include media-phone-pop {
+    top: 24%;
+    left: 18%;
+  }
+  @include media-phone {
+    top: 24%;
+    left: 16%;
   }
   @include phone {
     left: 22%;
     padding: 30px 15px 50px;
+  }
+  @include phone-pop {
+    left: 19%;
+  }
+  @include phone-pop-small {
+    left: 17%;
   }
   @include media-phone-small {
     left: 15%;
