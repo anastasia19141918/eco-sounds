@@ -1,13 +1,16 @@
+@use '../base/mixin' as m;
+@use '../base/constans' as c;
+
 .footer {
   padding: 10px 10px 10px;
-  background-color: $color-footer;
+  background-color: c.$color-footer;
 };
 
 .footer__text {
-  color: $colot-link;
+  color: c.$colot-link;
   font-family: 'Inter';
   font-size: 1.5rem;
-  @include media-phone-big {
+  @include m.media-phone-big {
     font-size: 1.2rem;
   }
 };
@@ -25,7 +28,7 @@
   height: 30px;
   background-image: url('../../src/img/icons-github.png');
   background-size: 30px 30px;
-  @include media-phone-big {
+  @include m.media-phone-big {
     width: 20px;
     height: 20px;
     background-size: 20px 20px;

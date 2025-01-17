@@ -1,55 +1,57 @@
+@use '../base/media' as m;
+
 @mixin media-tablet-big {
-  @media(max-width: $media-tablet-big) {@content;}
+  @media(max-width: m.$media-tablet-big) {@content;}
 };
 
 @mixin media-tablet {
-  @media(max-width: $media-tablet) {@content;}
+  @media(max-width: m.$media-tablet) {@content;}
 };
 
 @mixin tablet {
-  @media(max-width: $tablet) {@content;}
+  @media(max-width: m.$tablet) {@content;}
 };
 
 @mixin media-tablet-small {
-  @media(max-width: $media-tablet-small) {@content;}
+  @media(max-width: m.$media-tablet-small) {@content;}
 };
 
 @mixin media-tablet-pop {
-  @media(max-width: $media-tablet-pop) {@content;}
+  @media(max-width: m.$media-tablet-pop) {@content;}
 };
 
 @mixin media-phone-big {
-  @media(max-width: $media-phone-big) {@content;}
+  @media(max-width: m.$media-phone-big) {@content;}
 };
 
 @mixin media-phone-big-pop {
-  @media(max-width: $media-phone-big-pop) {@content;}
+  @media(max-width: m.$media-phone-big-pop) {@content;}
 };
 
 @mixin media-phone-pop {
-  @media(max-width: $media-phone-pop) {@content;}
+  @media(max-width: m.$media-phone-pop) {@content;}
 };
 
 @mixin media-phone {
-  @media(max-width: $media-phone) {@content;}
+  @media(max-width: m.$media-phone) {@content;}
 };
 
 @mixin phone {
-  @media(max-width: $phone) {@content;}
+  @media(max-width: m.$phone) {@content;}
 };
 
 @mixin phone-pop {
-  @media(max-width: $phone-pop) {@content;}
+  @media(max-width: m.$phone-pop) {@content;}
 };
 
 @mixin media-phone-small {
-  @media(max-width: $media-phone-small) {@content;}
+  @media(max-width: m.$media-phone-small) {@content;}
 };
 
 @mixin phone-pop-small {
-  @media(max-width: $phone-pop-small) {@content;}
+  @media(max-width: m.$phone-pop-small) {@content;}
 };
 
 @mixin media-mobale {
-  @media(max-width: $media-mobale) {@content;}
+  @media(max-width: m.$media-mobale) {@content;}
 };

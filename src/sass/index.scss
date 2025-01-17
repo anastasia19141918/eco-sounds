@@ -1,13 +1,13 @@
-@import'../../src/sass/normalize.css';
+@use'../../src/sass/normalize.css';
 
-@import'base/base';
-@import'base/constans';
-@import'base/font';
-@import'base/mixin';
+@use'base/base';
+@use'base/constans';
+@use'base/font';
 
-@import'layouts/main';
-@import'layouts/wrapper';
-@import'layouts/footer';
-@import'layouts/pop';
-@import'layouts/player';
-@import'layouts/backgaround';
+
+@use'layouts/main';
+@use'layouts/wrapper';
+@use'layouts/footer';
+@use'layouts/pop';
+@use'layouts/player';
+@use'layouts/backgaround';

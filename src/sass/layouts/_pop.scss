@@ -1,3 +1,6 @@
+@use '../base/mixin' as m;
+@use '../base/constans' as c;
+
 .pop {
   opacity: 0;
   pointer-events: none;
@@ -7,7 +10,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: c.$pop-bg;
   transition: 0.5s all;
 };
 
@@ -15,78 +18,78 @@
   opacity: 1;
   pointer-events: all;
   transition: 0.5s all;
-}
+};
 
 .pop__body {
   position: absolute;
   padding: 30px 35px 60px;
   top: 10%;
   left: 37%;
-  background-image: linear-gradient(#75A3BF, #898C30);
+  background-image: linear-gradient(c.$color-bg-first, c.$pop-body-body);
   border-radius: 5px;
-  @include media-tablet-big {
+  @include m.media-tablet-big {
     left: 35%;
     padding: 20px 30px 40px;
-  }
-  @include media-tablet {
+  };
+  @include m.media-tablet {
     top: 20%;
     left: 30%;
-  }
-  @include tablet {
+  };
+  @include m.tablet {
     top: 20%;
     left: 27%;
-  }
-  @include media-tablet-small {
+  };
+  @include m.media-tablet-small {
     padding: 20px 20px 40px;
-  }
+  };
 
-  @include media-tablet-pop {
+  @include m.media-tablet-pop {
     top: 20%;
     left: 25%;
-  }
+  };
 
-  @include media-phone-big {
+  @include m.media-phone-big {
     top: 24%;
     left: 22%;
-  }
-  @include media-phone-big-pop {
+  };
+  @include m.media-phone-big-pop {
     top: 24%;
     left: 20%;
   }
-  @include media-phone-pop {
+  @include m.media-phone-pop {
     top: 24%;
     left: 18%;
-  }
-  @include media-phone {
+  };
+  @include m.media-phone {
     top: 24%;
     left: 16%;
-  }
-  @include phone {
+  };
+  @include m.phone {
     left: 22%;
     padding: 30px 15px 50px;
   }
-  @include phone-pop {
+  @include m.phone-pop {
     left: 19%;
-  }
-  @include phone-pop-small {
+  };
+  @include m.phone-pop-small {
     left: 17%;
   }
-  @include media-phone-small {
+  @include m.media-phone-small {
     left: 15%;
-  }
-  @include media-mobale {
+  };
+  @include m.media-mobale {
     left: 10%;
-  }
+  };
 };
 
 .pop__btn-close {
   display: flex;
   justify-content: flex-end;
   margin: 0 0 30px 0;
-  @include media-tablet-small {
+  @include m.media-tablet-small {
     margin: 0 0 10px 0;
   }
-}
+};
 
 .pop__close {
   width: 30px;
@@ -94,31 +97,29 @@
   background-image: url('../../src/img/Close-pop.svg');
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  @include phone {
+  @include m.phone {
     width: 20px;
     height: 20px;
     background-size: 20px 20px;
   }
-}
+};
 
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-
+};
 
 .pop__itemns {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+};
 
 .pop_link {
   font-size: 2.5rem;
-  color:#171C26;
-  @include phone {
+  color: c.$color-pop;
+  @include m.phone {
     font-size: 2.0rem;
   }
-}
+};
