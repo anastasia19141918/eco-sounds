@@ -3,27 +3,13 @@
 
 .background__pop {
   padding: 5% 0 0 0;
- 
-  @include m.media-desktop {
-    padding: 15% 0 0 0;
-  };
-  @include m.media-tablet-big {
-    padding: 25% 0 0 0;
-    margin: 0 0 0 15%;
-  };
-  @include m.media-tablet-big-pop {
-    padding: 35% 0 0 0;
-    margin: 0 11% 0 11%;
-  };
   @include m.media-tablet {
-    padding: 25% 0 0 0;
+    padding: 2% 0 0 0;
   };
-  @include m.media-tablet-small {
-    padding: 35% 0 0 0;
+  @include m.phone {
+    padding: 8% 0 0 0;
   };
-  @include m.media-phone-big-pop {
-    padding: 55% 0 0 0;
-  }
+  
 }
 
 .pop__body {
@@ -34,11 +20,8 @@
     padding: 40px 40px;
   };
   @include m.media-tablet-big {
-    max-width: 550px;
+    max-width: 450px;
   };
-  @include m.media-tablet-pop {
-    max-width: 480px;
-  }
 };
 
 ul {
@@ -58,15 +41,17 @@ ul {
     margin: 0 5%;
   };
   @include m.media-phone-big-pop {
-    gap: 60px;
+    gap: 30px;
   }
 };
 
 .pop_link {
   font-size: 3.0rem;
   color: c.$color-pop;
-  @include m.media-tablet-pop {
+  @include m.media-tablet-big {
     font-size: 2.5rem;
   };
-  
+  @include m.phone {
+    font-size: 2.2rem;
+  }
 };
