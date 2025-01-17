@@ -328,7 +328,7 @@ a {
   src: url("../../src/fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 .background {
-  padding: 10% 3% 0% 3%;
+  padding: 3% 3% 0% 3%;
   height: calc(100vh - 120px);
   background: url("../../src/img/bg.jpg");
   background-repeat: no-repeat;
@@ -336,7 +336,7 @@ a {
 }
 @media (max-width: 640px) {
   .background {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 100px);
   }
 }
 @media (max-width: 595px) {
@@ -356,22 +356,56 @@ a {
   }
 }
 
+.background__wrapper {
+  display: flex;
+  padding: 0% 0 0 0;
+  flex-direction: row;
+  gap: 0 30%;
+}
+@media (max-width: 1355px) {
+  .background__wrapper {
+    gap: 0 20%;
+  }
+}
+@media (max-width: 1025px) {
+  .background__wrapper {
+    gap: 0 10%;
+  }
+}
+@media (max-width: 978px) {
+  .background__wrapper {
+    flex-direction: column;
+  }
+}
+
 .background__title {
   width: 187px;
-  margin: 0 0 55px 0px;
+  margin: 0 0 70% 0px;
   font-family: "Inter";
+  font-weight: 700;
   color: #E1BE0F;
-  font-size: 4rem;
+  font-size: 7rem;
   font-weight: 100;
+}
+@media (max-width: 1025px) {
+  .background__title {
+    margin: 40% 0 60% 0px;
+  }
+}
+@media (max-width: 978px) {
+  .background__title {
+    margin: 5% 0 10% 0px;
+  }
 }
 @media (max-width: 750px) {
   .background__title {
-    font-size: 3rem;
+    margin: 5% 0 15% 0px;
+    font-size: 4rem;
   }
 }
 @media (max-width: 595px) {
   .background__title {
-    margin: 0 0 75px 0px;
+    margin: 0 0 25% 0px;
   }
 }
 @media (max-width: 475px) {
@@ -390,53 +424,27 @@ a {
   }
 }
 
-.background__line {
-  max-width: 1098px;
-  height: 2px;
-  margin: 0 0 50px 70px;
-  background-color: #060606;
-}
-@media (max-width: 595px) {
-  .background__line {
-    height: 3px;
-  }
-}
-@media (max-width: 595px) {
-  .background__line {
-    margin: 0 0 130px 70px;
-  }
-}
-@media (max-width: 410px) {
-  .background__line {
-    height: 2px;
-  }
-}
-
 .background__text {
   width: 501px;
-  margin: 0 0 6% 48%;
   font-family: "Inter";
   color: #E1BE0F;
   font-size: 3.2rem;
 }
 @media (max-width: 978px) {
   .background__text {
-    margin: 0 0 6% 28%;
     font-size: 3rem;
   }
 }
 @media (max-width: 750px) {
   .background__text {
     width: 420px;
-    margin: 0 0 25% 25%;
-    font-size: 2.8rem;
+    font-size: 2.9rem;
   }
 }
 @media (max-width: 595px) {
   .background__text {
     width: 360px;
     font-size: 2.2rem;
-    margin: 0 0 25% 18%;
   }
 }
 @media (max-width: 475px) {
@@ -449,7 +457,6 @@ a {
   .background__text {
     max-width: 220px;
     font-size: 1.8rem;
-    margin: 0 0 35% 18%;
   }
 }
 @media (max-width: 290px) {
@@ -458,16 +465,10 @@ a {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 290px) {
-  .background__text {
-    margin: 0 0 45% 18%;
-  }
-}
 @media (max-width: 255px) {
   .background__text {
     font-size: 1.3rem;
     max-width: 170px;
-    margin: 0 0 45% 8%;
   }
 }
 
@@ -565,135 +566,60 @@ a {
   }
 }
 
-.pop {
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: 0.5s all;
+.background__pop {
+  padding: 5% 0 0 0;
 }
-
-.pop__active {
-  opacity: 1;
-  pointer-events: all;
-  transition: 0.5s all;
-}
-
-.pop__body {
-  position: absolute;
-  padding: 30px 35px 60px;
-  top: 10%;
-  left: 37%;
-  background-image: linear-gradient(#75A3BF, #898C30);
-  border-radius: 5px;
+@media (max-width: 1025px) {
+  .background__pop {
+    padding: 15% 0 0 0;
+  }
 }
 @media (max-width: 978px) {
-  .pop__body {
-    left: 35%;
-    padding: 20px 30px 40px;
+  .background__pop {
+    padding: 25% 0 0 0;
+    margin: 0 0 0 15%;
+  }
+}
+@media (max-width: 880px) {
+  .background__pop {
+    padding: 35% 0 0 0;
+    margin: 0 11% 0 11%;
   }
 }
 @media (max-width: 750px) {
-  .pop__body {
-    top: 20%;
-    left: 30%;
-  }
-}
-@media (max-width: 640px) {
-  .pop__body {
-    top: 20%;
-    left: 27%;
+  .background__pop {
+    padding: 25% 0 0 0;
   }
 }
 @media (max-width: 595px) {
+  .background__pop {
+    padding: 35% 0 0 0;
+  }
+}
+@media (max-width: 458px) {
+  .background__pop {
+    padding: 55% 0 0 0;
+  }
+}
+
+.pop__body {
+  padding: 80px 55px;
+  background-color: #75A3BF;
+  border-radius: 10px;
+}
+@media (max-width: 978px) {
   .pop__body {
-    padding: 20px 20px 40px;
+    padding: 40px 40px;
+  }
+}
+@media (max-width: 978px) {
+  .pop__body {
+    max-width: 550px;
   }
 }
 @media (max-width: 535px) {
   .pop__body {
-    top: 20%;
-    left: 25%;
-  }
-}
-@media (max-width: 475px) {
-  .pop__body {
-    top: 24%;
-    left: 22%;
-  }
-}
-@media (max-width: 458px) {
-  .pop__body {
-    top: 24%;
-    left: 20%;
-  }
-}
-@media (max-width: 429px) {
-  .pop__body {
-    top: 24%;
-    left: 18%;
-  }
-}
-@media (max-width: 410px) {
-  .pop__body {
-    top: 24%;
-    left: 16%;
-  }
-}
-@media (max-width: 380px) {
-  .pop__body {
-    left: 22%;
-    padding: 30px 15px 50px;
-  }
-}
-@media (max-width: 355px) {
-  .pop__body {
-    left: 19%;
-  }
-}
-@media (max-width: 335px) {
-  .pop__body {
-    left: 17%;
-  }
-}
-@media (max-width: 290px) {
-  .pop__body {
-    left: 15%;
-  }
-}
-@media (max-width: 255px) {
-  .pop__body {
-    left: 10%;
-  }
-}
-
-.pop__btn-close {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 0 30px 0;
-}
-@media (max-width: 595px) {
-  .pop__btn-close {
-    margin: 0 0 10px 0;
-  }
-}
-
-.pop__close {
-  width: 30px;
-  height: 30px;
-  background-image: url("../../src/img/Close-pop.svg");
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-}
-@media (max-width: 380px) {
-  .pop__close {
-    width: 20px;
-    height: 20px;
-    background-size: 20px 20px;
+    max-width: 480px;
   }
 }
 
@@ -706,16 +632,31 @@ ul {
 .pop__itemns {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+}
+@media (max-width: 978px) {
+  .pop__itemns {
+    margin: 0 20%;
+  }
+}
+@media (max-width: 595px) {
+  .pop__itemns {
+    margin: 0 5%;
+  }
+}
+@media (max-width: 458px) {
+  .pop__itemns {
+    gap: 60px;
+  }
 }
 
 .pop_link {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #171C26;
 }
-@media (max-width: 380px) {
+@media (max-width: 535px) {
   .pop_link {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 

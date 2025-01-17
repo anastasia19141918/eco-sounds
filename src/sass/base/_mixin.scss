@@ -1,7 +1,21 @@
 @use '../base/media' as m;
 
+@mixin media-desktop-big {
+  @media  (max-width: m.$media-desktop-big) {@content};
+};
+
+@mixin  media-desktop {
+  @media  (max-width: m.$media-desktop) {@content};
+};
+
 @mixin media-tablet-big {
   @media(max-width: m.$media-tablet-big) {@content;}
+};
+
+//$media-tablet-big-pop: 870px;
+
+@mixin media-tablet-big-pop {
+  @media(max-width: m.$media-tablet-big-pop) {@content;}
 };
 
 @mixin media-tablet {
