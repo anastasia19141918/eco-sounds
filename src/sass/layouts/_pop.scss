@@ -1,124 +1,72 @@
-.pop {
-  opacity: 0;
-  pointer-events: none;
+@use '../base/mixin' as m;
+@use '../base/constans' as c;
 
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: 0.5s all;
-};
-
-.pop__active {
-  opacity: 1;
-  pointer-events: all;
-  transition: 0.5s all;
+.background__pop {
+  padding: 5% 0 0 0;
+ 
+  @include m.media-desktop {
+    padding: 15% 0 0 0;
+  };
+  @include m.media-tablet-big {
+    padding: 25% 0 0 0;
+    margin: 0 0 0 15%;
+  };
+  @include m.media-tablet-big-pop {
+    padding: 35% 0 0 0;
+    margin: 0 11% 0 11%;
+  };
+  @include m.media-tablet {
+    padding: 25% 0 0 0;
+  };
+  @include m.media-tablet-small {
+    padding: 35% 0 0 0;
+  };
+  @include m.media-phone-big-pop {
+    padding: 55% 0 0 0;
+  }
 }
 
 .pop__body {
-  position: absolute;
-  padding: 30px 35px 60px;
-  top: 10%;
-  left: 37%;
-  background-image: linear-gradient(#75A3BF, #898C30);
-  border-radius: 5px;
-  @include media-tablet-big {
-    left: 35%;
-    padding: 20px 30px 40px;
-  }
-  @include media-tablet {
-    top: 20%;
-    left: 30%;
-  }
-  @include tablet {
-    top: 20%;
-    left: 27%;
-  }
-  @include media-tablet-small {
-    padding: 20px 20px 40px;
-  }
-
-  @include media-tablet-pop {
-    top: 20%;
-    left: 25%;
-  }
-
-  @include media-phone-big {
-    top: 24%;
-    left: 22%;
-  }
-  @include media-phone-big-pop {
-    top: 24%;
-    left: 20%;
-  }
-  @include media-phone-pop {
-    top: 24%;
-    left: 18%;
-  }
-  @include media-phone {
-    top: 24%;
-    left: 16%;
-  }
-  @include phone {
-    left: 22%;
-    padding: 30px 15px 50px;
-  }
-  @include phone-pop {
-    left: 19%;
-  }
-  @include phone-pop-small {
-    left: 17%;
-  }
-  @include media-phone-small {
-    left: 15%;
-  }
-  @include media-mobale {
-    left: 10%;
+  padding: 80px 55px;
+  background-color: c.$color-bg-first; 
+  border-radius: 10px;
+  @include m.media-tablet-big {
+    padding: 40px 40px;
+  };
+  @include m.media-tablet-big {
+    max-width: 550px;
+  };
+  @include m.media-tablet-pop {
+    max-width: 480px;
   }
 };
-
-.pop__btn-close {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 0 30px 0;
-  @include media-tablet-small {
-    margin: 0 0 10px 0;
-  }
-}
-
-.pop__close {
-  width: 30px;
-  height: 30px;
-  background-image: url('../../src/img/Close-pop.svg');
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  @include phone {
-    width: 20px;
-    height: 20px;
-    background-size: 20px 20px;
-  }
-}
 
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-
+};
 
 .pop__itemns {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
+  gap: 30px;
+  @include m.media-tablet-big {
+    margin: 0 20%;
+  };
+  @include m.media-tablet-small {
+    margin: 0 5%;
+  };
+  @include m.media-phone-big-pop {
+    gap: 60px;
+  }
+};
 
 .pop_link {
-  font-size: 2.5rem;
-  color:#171C26;
-  @include phone {
-    font-size: 2.0rem;
-  }
-}
+  font-size: 3.0rem;
+  color: c.$color-pop;
+  @include m.media-tablet-pop {
+    font-size: 2.5rem;
+  };
+  
+};

@@ -1,4 +1,5 @@
+@use '../base/constans' as c;
 .wrapper {
-  max-width: $width;
+  max-width: c.$width;
   margin: auto;
 }

@@ -1,116 +1,118 @@
+@use '../base/mixin' as m;
+@use '../base/constans' as c;
+
 .background {
-  padding: 10% 3% 0% 3%;
+  padding: 3% 3% 0% 3%;
   height: calc(100vh - 120px);
   background: url('../../src/img/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  @include tablet {
-    height: calc(100vh - 110px);
-  }
-  @include media-tablet-small {
+  @include m.tablet {
     height: calc(100vh - 100px);
   }
-  @include media-phone-big {
+  @include m.media-tablet-small {
+    height: calc(100vh - 100px);
+  }
+  @include m.media-phone-big {
     height: calc(100vh - 70px);
   }
-  @include media-phone-small {
+  @include m.media-phone-small {
     height: calc(100vh - 50px);
     padding: 27% 3% 0% 3%;
   }
 };
 
+.background__wrapper {
+  display: flex;
+  padding: 0% 0 0 0;
+  flex-direction: row;
+  gap: 0 30%;
+  @include m.media-desktop-big {
+    gap: 0 20%;
+  };
+  @include m.media-desktop {
+    gap: 0 10%;
+  };
+  @include m.media-tablet-big {
+    flex-direction: column;
+  }
+}
+
 .background__title {
   width: 187px;
-  margin: 0 0 55px 0px;
+  margin: 0 0 70% 0px;
   font-family: 'Inter';
-  color: $color-text;
-  font-size: 4.0rem;
+  font-weight: 700;
+  color: c.$color-text;
+  font-size: 7.0rem;
   font-weight: 100;
-  @include media-tablet {
-    font-size: 3.0rem;
+  @include m.media-desktop {
+    margin: 40% 0 60% 0px;
+  };
+  @include m.media-tablet-big {
+    margin: 5% 0 10% 0px;
   }
-  @include media-tablet-small {
-    margin: 0 0 75px 0px;
-  }
-  @include media-phone-big {
+  @include m.media-tablet {
+    margin: 5% 0 15% 0px;
+    font-size: 4.0rem;
+  };
+  @include m.media-tablet-small {
+    margin: 0 0 25% 0px;
+  };
+  @include m.media-phone-big {
     font-size: 2.7rem;
-  }
-  @include media-phone {
+  };
+  @include m.media-phone {
     font-size: 2.3rem;
-  }
-  @include media-phone-small {
+  };
+  @include m.media-phone-small {
     font-size: 2.0rem;
-  }
-};
-
-.background__line {
-  max-width: 1098px;
-  height: 2px;
-  margin: 0 0 50px 70px;
-  background-color: $color-footer;
-  @include media-tablet-small {
-    height: 3px;
-  }
-  @include media-tablet-small {
-    margin: 0 0 130px 70px;
-  }
-  @include media-phone {
-    height: 2px;
   }
 };
 
 .background__text {
   width: 501px;
-  margin: 0 0 6% 48%;
   font-family: 'Inter';
-  color: $color-text;
+  color: c.$color-text;
   font-size: 3.2rem;
-  @include media-tablet-big {
-    margin: 0 0 6% 28%;
+  @include m.media-tablet-big {
     font-size: 3.0rem;
   }
-  @include media-tablet {
+  @include m.media-tablet {
     width: 420px;
-    margin: 0 0 25% 25%;
-    font-size: 2.8rem;
+    font-size: 2.9rem;
   }
-  @include media-tablet-small {
+  @include m.media-tablet-small {
     width: 360px;
     font-size: 2.2rem;
-    margin: 0 0 25% 18%;
   }
-  @include media-phone-big {
+  @include m.media-phone-big {
     max-width: 310px;
     font-size: 2.0rem;
   }
-  @include media-phone {
+  @include m.media-phone {
     max-width: 220px;
     font-size: 1.8rem;
-    margin: 0 0 35% 18%;
   }
-  @include media-phone-small {
+  @include m.media-phone-small {
     max-width: 200px;
     font-size: 1.5rem;
   }
-  @include media-phone-small {
-    margin: 0 0 45% 18%;
-  }
-  @include media-mobale {
+  @include m.media-mobale {
     font-size: 1.3rem;
     max-width: 170px;
-    margin: 0 0 45% 8%;
   }
 };
 
 .background__btn {
   margin: 0 0 0 30px;
-  @include media-phone-big {
+  @include m.media-phone-big {
     margin: 0 0 0 10px;
   }
-  @include media-phone-small {
+  @include m.media-phone-small {
     margin: 0 0 0 13%;
   }
-  @include media-mobale {
+  @include m.media-mobale {
     margin: 0 0 0 9%;
   }
 }
@@ -119,23 +121,23 @@
   width: 270px;
   padding: 15px 5px;
   font-family: 'Inter';
-  color: $color-text;
+  color: c.$color-text;
   font-size: 2.3rem;
-  background-color: $color-btn;
+  background-color: c.$color-btn;
   border-radius: 10px;
-  color: $color-footer;
+  color: c.$color-footer;
   border: none; 
   outline: none;
   cursor: pointer; 
-  @include media-tablet-small {
+  @include m.media-tablet-small {
     width: 210px;
     font-size: 2.0rem;
     padding: 10px 5px;
   }
-  @include media-phone-big {
+  @include m.media-phone-big {
     font-size: 1.8rem;
   }
-  @include media-phone {
+  @include m.media-phone {
     width: 190px;
     font-size: 1.6rem;
   }
