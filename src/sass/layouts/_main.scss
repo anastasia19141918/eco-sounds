@@ -34,6 +34,9 @@
     gap: 0 10%;
   };
   @include m.media-tablet-big {
+    gap: 0 5%;
+  };
+  @include m.media-tablet {
     flex-direction: column;
   }
 }
@@ -46,20 +49,22 @@
   color: c.$color-text;
   font-size: 7.0rem;
   font-weight: 100;
-  @include m.media-desktop {
-    margin: 40% 0 60% 0px;
+  @include m.media-desktop-big {
+    margin: 0 0 10% 0px;
   };
+  
   @include m.media-tablet-big {
     margin: 5% 0 10% 0px;
   }
   @include m.media-tablet {
-    margin: 5% 0 15% 0px;
+    margin: 5% 0 5% 0px;
     font-size: 4.0rem;
   };
   @include m.media-tablet-small {
     margin: 0 0 25% 0px;
   };
   @include m.media-phone-big {
+    margin: 0 0 20% 0px;
     font-size: 2.7rem;
   };
   @include m.media-phone {

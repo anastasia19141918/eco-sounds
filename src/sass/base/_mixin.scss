@@ -62,6 +62,10 @@
   @media(max-width: m.$media-phone-small) {@content;}
 };
 
+@mixin phone-pop-small-links {
+  @media(max-width: m.$phone-pop-small-links) {@content;}
+};
+
 @mixin phone-pop-small {
   @media(max-width: m.$phone-pop-small) {@content;}
 };
