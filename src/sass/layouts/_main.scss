@@ -39,6 +39,10 @@
   @include m.media-tablet {
     flex-direction: column;
   }
+};
+
+.background__desk {
+  margin-bottom: 7.0rem;
 }
 
 .background__title {
@@ -65,7 +69,7 @@
   };
   @include m.media-phone-big {
     margin: 0 0 20% 0px;
-    font-size: 2.7rem;
+    font-size: 3.7rem;
   };
   @include m.media-phone {
     font-size: 2.3rem;
@@ -93,7 +97,7 @@
   }
   @include m.media-phone-big {
     max-width: 310px;
-    font-size: 2.0rem;
+    font-size: 2.5rem;
   }
   @include m.media-phone {
     max-width: 220px;

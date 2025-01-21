@@ -383,6 +383,10 @@ a {
   }
 }
 
+.background__desk {
+  margin-bottom: 7rem;
+}
+
 .background__title {
   width: 187px;
   margin: 0 0 70% 0px;
@@ -416,7 +420,7 @@ a {
 @media (max-width: 475px) {
   .background__title {
     margin: 0 0 20% 0px;
-    font-size: 2.7rem;
+    font-size: 3.7rem;
   }
 }
 @media (max-width: 410px) {
@@ -456,7 +460,7 @@ a {
 @media (max-width: 475px) {
   .background__text {
     max-width: 310px;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 410px) {
@@ -588,7 +592,7 @@ a {
 
 .pop__body {
   padding: 80px 55px;
-  background-color: #75A3BF;
+  background-color: rgba(117, 163, 191, 0.3);
   border-radius: 10px;
 }
 @media (max-width: 978px) {
