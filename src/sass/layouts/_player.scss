@@ -11,12 +11,12 @@
   margin-bottom: 10px;
   text-align: center;
   color: c.$colo-active-track;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   @include m.media-tablet-big {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
   @include m.phone {
-    font-size: 2.0rem;
+    font-size: 2.2rem;
   }
   @include m.media-phone-small {
     font-size: 1.8rem;
@@ -29,16 +29,16 @@
   border-radius: 5px;
   border-radius: 10px;
   @include m.media-phone-big {
-    width: 300px;
+    width: 350px;
   }
   @include m.media-phone {
-    width: 270px;
+    width: 300px;
   }
   @include m.phone {
-    width: 210px;
+    width: 230px;
   }
  @include m.media-phone-small {
-    width: 180px;
+    width: 190px;
  }
  @include m.media-mobale {
     width: 160px;
