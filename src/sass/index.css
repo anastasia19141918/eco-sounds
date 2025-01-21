@@ -657,17 +657,17 @@ ul {
 .header__link {
   margin-bottom: 10px;
   text-align: center;
-  color: #14261C;
-  font-size: 2.5rem;
+  color: #F29F05;
+  font-size: 2.7rem;
 }
 @media (max-width: 978px) {
   .header__link {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 380px) {
   .header__link {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 290px) {
@@ -684,22 +684,22 @@ ul {
 }
 @media (max-width: 475px) {
   .player {
-    width: 300px;
+    width: 350px;
   }
 }
 @media (max-width: 410px) {
   .player {
-    width: 270px;
+    width: 300px;
   }
 }
 @media (max-width: 380px) {
   .player {
-    width: 210px;
+    width: 230px;
   }
 }
 @media (max-width: 290px) {
   .player {
-    width: 180px;
+    width: 190px;
   }
 }
 @media (max-width: 255px) {
@@ -752,7 +752,7 @@ ul {
 }
 
 .trek__active {
-  color: #14261C;
+  color: #F29F05;
 }
 
 .player__progress {
