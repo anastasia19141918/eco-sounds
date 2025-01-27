@@ -34,7 +34,7 @@
     gap: 0 10%;
   };
   @include m.media-tablet-big {
-    gap: 0 5%;
+    gap: 0 1%;
   };
   @include m.media-tablet {
     flex-direction: column;
@@ -43,6 +43,12 @@
 
 .background__desk {
   margin-bottom: 7.0rem;
+  @include m.media-tablet {
+    margin-bottom: 1.0rem;
+  };
+  @include m.media-phone {
+    margin-bottom: 8.0rem;
+  }
 }
 
 .background__title {
