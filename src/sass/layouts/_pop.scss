@@ -3,6 +3,8 @@
 
 .background__pop {
   padding: 5% 0 0 0;
+  
+  
   @include m.media-tablet {
     padding: 2% 0 0 0;
   };
@@ -15,6 +17,7 @@
 .pop__body {
   padding: 80px 55px;
   background-color: rgba(c.$color-bg-first, 0.3);
+  border: 1px solid c.$color-footer;
   border-radius: 10px;
   @include m.media-tablet-big {
     padding: 40px 40px;
@@ -48,6 +51,7 @@ ul {
 .pop_link {
   font-size: 3.0rem;
   color: c.$color-pop;
+  transition: 0.3s ease-in-out;
   @include m.media-tablet-big {
     font-size: 2.5rem;
   };
@@ -55,3 +59,12 @@ ul {
     font-size: 2.2rem;
   }
 };
+
+//hover
+.pop_link:hover {
+  transition: 0.3s ease-in-out;
+  color: c.$colo-active-track;
+  @include m.media-tablet-big {
+    color: c.$color-pop;
+  }
+}
